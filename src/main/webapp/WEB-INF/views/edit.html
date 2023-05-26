@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Sửa Blog</h1>
+<form action="/update" th:object="${blog}" method="post">
+    <input type="text" th:field="*{id}" readonly>
+    <input type="text" th:field="*{blogName}">
+    <input type="text" th:field="*{blogDetail}">
+    <button type="submit">Update</button>
+</form>
+</body>
+</html>

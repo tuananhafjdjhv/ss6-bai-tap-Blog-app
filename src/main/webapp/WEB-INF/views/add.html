@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Thêm mới Blog</h1>
+<form action="/create" method="post" th:object="${blogList}">
+    <input type="text" th:field="*{blogName}">
+    <input type="text" th:field="*{blogDetail}">
+    <button type="submit">ADD</button>
+</form>
+</body>
+</html>

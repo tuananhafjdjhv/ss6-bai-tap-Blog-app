@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Danh sách các Blog</h1>
+<a href="/add">Thêm blog</a>
+<table>
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Blog Name</th>
+        <th>Blog Detail</th>
+        <th colspan="2">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="list:${list}">
+        <td th:text="${list.getId()}"></td>
+        <td th:text="${list.getBlogName()}"></td>
+        <td th:text="${list.getBlogDetail()}"></td>
+        <td ><a th:href="'/edit/'+${list.getId()}" >Edit</a></td>
+        <td><a th:href="'/delete/'+${list.getId()}" >Delete</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
